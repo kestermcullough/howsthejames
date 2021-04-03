@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How's The James - River Conditions in RVA</title>
+  <link rel="stylesheet" type = "text.css" href="style.css">
+  <script>
+  function fetchJSONFile(path, callback) {
+      var httpRequest = new XMLHttpRequest();
+      httpRequest.onreadystatechange = function() {
+          if (httpRequest.readyState === 4) {
+              if (httpRequest.status === 200) {
+                  var data = JSON.parse(httpRequest.responseText);
+                  if (callback) callback(data);
+              }
+          }
+      };
+      httpRequest.open('GET', path);
+      httpRequest.send(); 
+  }
+    fetchJSONFile('data.json', function(data){
+     //console.log(data);
+     document.getElementById("tempToday").innerHTML = data.currentTemp;
+     document.getElementById("heightToday").innerHTML = data.currentHeight;
+     document.getElementById("tempTomorrow").innerHTML = data.forecastTemp;
+     document.getElementById("waterTemp").innerHTML = data.currentWater;
+     document.getElementById("heightTomorrow").innerHTML = data.forecastHeight;
+     document.getElementById("dateFetched").innerHTML = data.dateFetched;
+  });
+   </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="content">
+      <h1>How's The James?</h1>
+      <h2>weather and river conditions for RVA</h2>
+      <p>It's <strong><a id="tempToday"></a>°F</strong> outside. The James is at <strong><a id="heightToday"></a> ft</strong> and <strong><a id="waterTemp"></a> °F</strong>.</p>
+      <p></p>
+      <p>Tomorrow it'll be <strong><a id="tempTomorrow"></a>°F</strong>. The James will be at <strong><a id="heightTomorrow"></a> ft.</strong></p>
+    </div>
+    <div id="footer">
+      <p style = "text-align:left">Powered by <a href="http://forecast.io/">Forecast</a>, USGS, and NOAA. Created by Kester. Data last updated <a id="dateFetched"></a></p>
+    </div>
+  </div>
+</body>
+</html>

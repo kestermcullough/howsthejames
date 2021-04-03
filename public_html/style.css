@@ -1,0 +1,122 @@
+body {
+ 	margin: 0;
+ 	padding: 0;
+ 	height: 100%;
+}
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* Ive added stuff below here in this section, lets see if it breaks */
+    font-family: Arial, Helvetica, sans-serif;
+    /*text-shadow: 0 0 10px #000;*/
+    color: #fff;
+    background: #6699ff;
+    font-size: 2em;
+}
+* html #wrapper {
+    height:100%; 
+}
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+#content {
+    padding-bottom: 30px; /* ATTENTION! padding-bottom should be equal to the footer height (this keeps the footer from overlapping the content) */
+}
+#footer {
+    position: absolute;
+    width: 100%;
+	clear: both;
+    bottom: 0;
+	padding: 0;
+    margin: 0;
+    /* ATTENTION! The following elements below 
+    can be set to whatever your heart desires */
+    height: 30px; /* REMEMBER height = padding-bottom */
+    /*background: #333;*/
+    font-size: 0.5em;
+}
+
+h1{
+  font-size: 2em;
+  padding: 0.5em 0 0.1em 0;
+  line-height: 1em;
+  margin: 0;
+  text-align: center;
+}
+
+h2{
+	font-size: 0.5em;
+	margin: 0;
+	text-align: center;
+}
+
+p{
+  text-align: center;
+}
+
+a{
+  color: #fff;
+}
+
+
+
+
+/*
+  body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    /*text-shadow: 0 0 10px #000;*//*
+    color: #fff;
+    background: #6699ff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    /*section{
+      min-height: 100%;
+    }*//*
+    h1{
+      font-size: 2em;
+      padding: 0.5em 0 0.1em 0;
+      line-height: 1em;
+      margin: 0;
+      text-align: center;
+    }
+    h2{
+    	font-size: 0.5em;
+    	margin: 0;
+    	text-align: center;
+    }
+    p{
+      padding: 0 1em;
+      text-align: center;
+    }
+    a{
+      color: #fff;
+    }
+    #container {
+    margin: 0 auto;
+    min-height: 100%;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    }
+    #footer {
+    bottom: 0;
+    color: #fff;
+    line-height: 2em;
+    padding: 0.5em 0;
+    position: absolute;
+    font-size: small;
+    width:100%;
+    }
+    .content {
+    margin: 0 0;
+    padding: 0 0 2em;
+    text-align: justify;
+    }*/
